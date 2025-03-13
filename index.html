@@ -5,34 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Keo's Stuff Library</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <div class="header">
-        <h1>Keo's Stuff Library</h1>
-        <div class="controls">
-            <button id="back-button" style="display: none;">
-                <i class="fas fa-arrow-left"></i> Back
-            </button>
-            <button id="theme-toggle">
-                <i class="fas fa-moon"></i>
-                <span class="toggle-text">Dark Mode</span>
-            </button>
-        </div>
-    </div>
-
     <div class="container">
-        <input type="text" id="search-bar" placeholder="Search for files..." />
-        <select id="sort-options">
-            <option value="A-Z">Name (A-Z)</option>
-            <option value="Z-A">Name (Z-A)</option>
-            <option value="Newest">Newest First</option>
-            <option value="Oldest">Oldest First</option>
+        <header>
+            <div class="logo">
+                <i class="fas fa-archive"></i>
+                <h1>Keo's Stuff Library</h1>
+            </div>
+            <div class="controls">
+                <button id="back-button" class="back-btn" style="display: none;">
+                    <i class="fas fa-arrow-left"></i>
+                    Back
+                </button>
+                <button id="theme-toggle" class="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                    Toggle Theme
+                </button>
+            </div>
+        </header>
+        
+        <div id="search-container" class="search-container" style="display: none;">
+            <i class="fas fa-search search-icon"></i>
+            <input type="text" id="search-bar" class="search-bar" placeholder="Search files..." />
+        </div>
+        
+        <select id="sort-options" class="sort-options" style="display: none;">
+            <option value="A-Z">Sort: A-Z</option>
+            <option value="Z-A">Sort: Z-A</option>
         </select>
         
-        <div id="folder-list"></div>
-        <div id="file-list" style="display: none;"></div>
+        <div id="folder-list" class="folder-list"></div>
+        <div id="file-list" class="file-list" style="display: none;"></div>
     </div>
 
     <script src="script.js"></script>
